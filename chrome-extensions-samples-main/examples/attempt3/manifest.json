@@ -1,0 +1,22 @@
+{
+    "name": "Mindfull Youtube",
+    "description": "Removes some 'continue session' elements from youtube.",
+    "version": "1.0",
+    "permissions": [
+        "tabs","<all_urls>"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+        "matches": [
+            "http://www.youtube.com/*",
+            "https://www.youtube.com//*"
+            ],
+        "js": ["content.js"],
+        "run_at": "document_end"    // Pay attention to this line
+        }
+    ], 
+    "manifest_version": 2
+}
